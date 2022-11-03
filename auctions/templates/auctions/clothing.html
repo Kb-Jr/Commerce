@@ -1,0 +1,9 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% for cloth in clothing %}
+    <a href="{% url 'details' cloth.id %}">
+        <div>{{ cloth }}</div>
+    </a>
+    {% endfor %}
+{% endblock %}

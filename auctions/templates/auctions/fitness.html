@@ -1,0 +1,9 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% for fitness in fitness %}
+    <a href="{% url 'details' fitness.id %}">
+        <div>{{ fitness }}</div>
+    </a>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% for game in games %}
+    <a href="{% url 'details' game.id %}">
+        <div>{{ game }}</div>
+    </a>
+    {% endfor %}
+{% endblock %}

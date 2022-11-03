@@ -1,0 +1,9 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% for book in books %}
+    <a href="{% url 'details' book.id %}">
+        <div>{{ book }}</div>
+    </a>
+    {% endfor %}
+{% endblock %}
